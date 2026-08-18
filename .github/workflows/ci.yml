@@ -27,7 +27,7 @@ jobs:
           sudo apt install -yq --no-install-recommends g++-multilib
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v7
 
       - name: Checkout
         uses: actions/checkout@v7
