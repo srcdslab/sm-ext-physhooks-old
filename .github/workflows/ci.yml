@@ -57,6 +57,8 @@ jobs:
       - name: Install sourcemod dependencies
         run: |
           bash sourcemod/tools/checkout-deps.sh -m -s ${{ matrix.sdks }}
+          # SM 1.11's checkout-deps.sh clones Metamod:Source master, which moved to KHook
+          git -C mmsource-1.10 checkout 1.11-dev
 
       - name: Install AMBuild
         run: python -m pip install ./ambuild
